@@ -74,7 +74,7 @@ var nombreGato = 'felix';
 console.log(nombreGato.length); // 5
 
 Funciones para calcular:
-function miFuncion() {}  (Más usada)
+function miFuncion() {}  (Es la función más usada)
 const otraFuncion = function () {};
 const yOtra = () => {};
 var otraFuncion = function () {};
