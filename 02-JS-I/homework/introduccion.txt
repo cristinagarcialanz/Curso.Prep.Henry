@@ -1,0 +1,115 @@
+Introducción a Javascript
+
+Instrucciones
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Variables: Una variable es una forma de almacenar el valor de algo para usar más tarde. Una variable se puede configurar (y restablecer) 
+a cualquier tipo, no necesitamos declarar su tipo al iniciar la variable. 
+
+### var
+La anatomía de una variable es primero la palabra clave, un espacio, 
+el nombre que le estamos dando a la variable, un signo de "igual", el valor que le estamos asignando a la variable y luego el punto y coma.
+var nombre="Juan";
+
+### let
+`let` es una nueva palabra clave de ES6, esto asignará una variable muy similar a` var`, pero con un comportamiento un poco diferente. 
+Lo más notable es que difiere al crear un "nivel de _scope_"
+let apellido = 'Perez';
+
+### const
+@@ -51,48 +59,51 @@ console.log();
+Este método muy simple nos permitirá imprimir en la consola todo lo que pongamos entre paréntesis.
+
+Tipos de Datos: de acuerdo a qué valores pueden tomar y qué operaciones se pueden realizar.
+### Strings, Numbers, and Booleans: Estos son los tipos de datos más básicos en Javascript.
+
+Las "strings": son bloques de texto, siempre se definirán entre comillas, ya sea simple o doble. 
+Cualquier texto entre comillas es una cadena o string.
+const nombrePerro = 'firulais';
+var nombrePerro = 'firulais';
+
+Los números: son solo eso, números. Los números NO se envuelven en comillas. Pueden ser negativos también. Javascript tiene una limitación en el 
+tamaño de un número (+/- 9007199254740991), pero muy raramente aparecerá esa limitación en nuestro uso diario.
+const positivo = 27;
+const negativo = -40;
+var positivo = 27;
+var negativo = -40;
+
+Los booleanos: Es un concepto que alimenta el código binario y el núcleo de las computadoras. Es posible que haya visto código binario en el pasado (0001 0110…), 
+esto es lógica booleana. Esencialmente significa que tiene dos opciones, activar o desactivar, 0 o 1, verdadero o falso. En Javascript usamos 
+booleanos para significar verdadero o falso. Esto puede parecer simple al principio, pero puede complicarse más adelante.
+Los booleanos provienen de la [lógica de Boole](https://es.wikipedia.org/wiki/%C3%81lgebra_de_Boole). 
+Los valores posibles de un dato booleando en JS son: `true` o `false`.
+const meEncantaJavascript = true;
+var meEncantaJavascript = true;
+
+Funciones (argumentos, return): Un operador (`+`, `-`, `/`, `*`) no es otra cosa que una función, pero al ser funciones básicas para el Engine y que se utilizan 
+muchos, se escriben de una forma particular y que en general es corta y simple. Generalmente, los operadores toman dos parámetros (a,b) y 
+retornan un resultado.
+Por ejemplo: Para el intérprete al ver el signo `+`, sabe que tiene que ejecutar la función suma (que tiene internamente definida), y toma 
+como parámetros los términos que estén a la izquierda y la derecha del operador (a,b). De hecho, es equivalente a tener una función que se 
+llame `suma` y que reciba dos parámetros (a,b): Vamos a poder realizar operaciones en JavaScript a través de los `operadores`. Básicamente son 
+símbolos que ya conocemos (`+`, `-`, `/`, `*`) que indican al intérprete de JavaScript las operaciones que debe realizar.
+
+notación `infix` o `infija`
+var a = 2 + 3; // 5
+
+function suma(a,b){
+  return a + b;
+
+var a = suma(2,3) // 5
+var b = 3 / 3; // 1
+
+postfix` o `postfija` el operador va a la derecha de los operandos
+-181,7 +192,7
+
+y la `prefix` o `prefija` el operador va a la izquierda de los operandos
+Math.ceil(6.0001) = 7;
+
+El tipo de datos "string" tiene un método incorporado llamado `.length`. Cualquier cadena que llamemos a esto devolverá la cantidad de 
+caracteres en esa cadena.
+
+const nombreGato = 'felix';
+var nombreGato = 'felix';
+console.log(nombreGato.length); // 5
+
+Funciones para calcular:
+function miFuncion() {}  (Más usada)
+const otraFuncion = function () {};
+const yOtra = () => {};
+var otraFuncion = function () {};
+var yOtra = () => {};
+
+-238,15 +249,15 
+function logHola(nombre) {console.log( `Hola, ${nombre}`);}
+
+const miNombre = 'Antonio';
+var miNombre = 'Antonio';
+logHola(miNombre);
+
+Podemos agregar múltiples argumentos colocando una coma entre ellos:
+
+function sumarDosNumeros(a, b) {const suma = a + b; var suma = a + b; return suma;}
+function restarDosNumeros(a, b) {const diferencia = a - b; var diferencia = a - b; return diferencia;}
+function dividirDosNumeros(a, b) {const producto = a / b; var producto = a / b; return producto;}
+
+const diferenciaDeResta = restarDosNumeros(10, 9);
+var diferenciaDeResta = restarDosNumeros(10, 9);
+console.log(diferenciaDeResta); // 1
+console.log(diferencia); // undefined
+
+
+
+
+Declaraciones if
+
+Valores booleanos (true, false)
+
+
+Instalar Node y NPM. NPM se incluye con Node. https://nodejs.org/en/download/
+
+Desde la carpeta Prep.Course en la carpeta donde clonaste el repo: ingresa el comando npm install, una vez que termine ingresa el comando npm test JSI.test.js para correr los tests automatizados. Al principio, todos los tests estarán fallados/rotos. Encontrarás las funciones para hacer pasar los tests en el archivo homework.js.
+
+Deberás ir escribiendo código en homework.js y corriendo de nuevo los tests hasta que TODOS hayan pasado.
+
+Una vez que termines cada homework, súbela a tu repositorio Prep.Course, con los comandos que ya aprendiste a usar en la primera lección de git.

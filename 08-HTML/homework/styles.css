@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://fushimigroup.com/statenislandtottenville/images/gallery/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#thirdDiv {
+    height: 500px;
+    width: 600px;
+    background-color: burlywood;
+    padding: 50px;
+    border: 5px solid black;
+}
+
+.divClass {
+    color: beige;
+}
+
+#spanId {
+    font-size: 18px;
+    margin: 50px;
+}
+
+h1 {
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 400px;
+}
